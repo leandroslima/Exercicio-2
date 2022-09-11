@@ -1,1 +1,29 @@
-<p>hello world</p>
+<div class="container">
+  <div class="row" style='margin-top: 10px'>
+    <div class="col-8">
+      <div class="row text-center">
+        <p><%= Apartment.count %> Furnished apartments for rent in <strong>São Paulo</strong></p>
+      </div>
+      <div class='row'>
+        <% @apartments.each do |apartment| %>
+          <%= link_to apartments_path do %>
+            <div class="col-sm-6">
+              <div class="card mb-3" style='width: 20rem; height:25rem'>
+                <img src="https://source.unsplash.com/1500x1000/?room&sig=100" alt="a beautiful room">
+                <div class="card-body">
+                  <h5 class="card-title"><%= apartment.neighborhood %></h5>
+                  <h3 class="card-subtitle"><%= apartment.address %></h3>
+                  <p class="card-text"><%= apartment.number_of_bedrooms %> bedroom(s)<strong>.</strong><%= apartment.number_of_bedrooms %> bathroom(s)</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <h3 class="card-text">from <i class="fa-solid fa-brazilian-real-sign"></i><%= apartment.price_per_month %>/mo</h3>
+                </div>
+              </div>
+              <p><%= apartment.name %> <%= apartment.address %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-4">
+    </div>
+  </div>
+</div>
