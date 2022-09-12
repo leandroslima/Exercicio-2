@@ -1,24 +1,22 @@
-<nav class="bg-white fixed-top">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex h-16 justify-between">
-      <div class="flex">
-        <div class="flex flex-shrink-0 items-center" style="max-heigth: 56px; min-width: 130px; max-width: 130px; padding-right: 0.5rem;">
-          <%= link_to root_path do %>
-            <img class="block h-8 w-auto lg:hidden" src="https://tabas.com/packs/media/images/logo-dark-e153277a7756ce181443a0227061abf3.svg" alt="Tabas">
-            <img class="hidden h-8 w-auto lg:block" src="https://tabas.com/packs/media/images/logo-dark-e153277a7756ce181443a0227061abf3.svg" alt="Tabas">
-          <% end %>
-        </div>
-        <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-          <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-          <a href="#" class="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900">APARTMENTS</a>
-          <a href="#" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">PROPERTY OWNER</a>
-          <a href="#" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">CORPORATE</a>
-          <a href="#" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"><i class="fa-solid fa-globe"></i></a>
-          <a href="#" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">SUPPORT</a>
-          <a href="/member/sign_up" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">SIGN UP</a>
-          <a href="/member/login" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"><i class="fa-regular fa-circle-user"></i>LOG IN</a>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top config-navbar">
+  <div class="container-fluid">
+    <%= link_to root_path do %>
+      <img class="block h-8 w-auto lg:hidden" src="https://tabas.com/packs/media/images/logo-dark-e153277a7756ce181443a0227061abf3.svg" alt="Tabas">
+      <img class="hidden h-8 w-auto lg:block" src="https://tabas.com/packs/media/images/logo-dark-e153277a7756ce181443a0227061abf3.svg" alt="Tabas">
+    <% end %>
+
+  <div>
+  </div>
+
+  <div class="ms-auto d-inline-flex">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#"><i class="fa-solid fa-globe"></i></a></a>
+        <a class="nav-item nav-link" href="#">SUPORT</a>
+        <%= link_to "SIGN UP", new_member_registration_path, class: 'nav-item nav-link' %>
+        <%= link_to "LOG IN", new_member_session_path, class: 'nav-item nav-link' %>
       </div>
     </div>
+  </div>
   </div>
 </nav>

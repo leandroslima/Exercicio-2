@@ -3,6 +3,6 @@ class Apartment < ApplicationRecord
   has_many_attached :photos, dependent: :destroy
 
   def cover_photo
-    photos.first
+    photos[2]
   end
 end

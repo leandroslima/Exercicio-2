@@ -14,7 +14,9 @@
 
   <body>
     <%= render 'shared/navbar' %>
-    <%= yield %>
+    <div class="body-margin">
+      <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
   </body>
 </html>

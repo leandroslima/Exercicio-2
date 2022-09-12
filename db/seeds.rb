@@ -16,6 +16,7 @@ hood = ['Bela Vista', 'Brooklin', 'Campo Belo', 'Consolação', 'Itaim Bibi', 'J
 price = (5000..20000).to_a
 bedrooms = (1..5).to_a
 
+j = 0
 50.times do |i|
   apartment = Apartment.create!(
     name: "#{quality.sample} #{place.sample} at",
@@ -26,7 +27,16 @@ bedrooms = (1..5).to_a
     number_of_bedrooms: bedrooms.sample
   )
 
-  apartment.photos.attach(io: File.open(Rails.root.join("app", "assets", "images", "photos", "photo (#{i+1}).jpg")), filename: apartment.name)
+  if i == 0
+    3.times do |k|
+      apartment.photos.attach(io: File.open(Rails.root.join("app", "assets", "images", "photos", "photo (#{k+1}).jpg")), filename: apartment.name)
+    end
+    j = 3
+  else
+    3.times do
+      apartment.photos.attach(io: File.open(Rails.root.join("app", "assets", "images", "photos", "photo (#{j += 1}).jpg")), filename: apartment.name)
+    end
+  end
 end
 
 puts "Apartments created"
