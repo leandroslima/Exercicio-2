@@ -1,12 +1,44 @@
 <div class='top-background-image' style="background-image: url(<%= rails_blob_url(@apartment.cover_photo) %>);">
+  <div class="default-card header">
+    <h3><%= @apartment.neighborhood %></h3>
+    <h2><%= @apartment.name %> <%= @apartment.address %></h2>
+    <h6>
+      <span><i class="fa-solid fa-bed"></i><%= @apartment.number_of_bedrooms %></span>&nbsp&nbsp
+      <span><i class="fa-solid fa-bath"></i><%= @apartment.number_of_bedrooms %></span>&nbsp&nbsp
+      <span><i class="fa-solid fa-house"></i>100 sqm</span>
+    </h6>
+  </div>
 </div>
 
-<div class="container" style='margin-top: 15px'>
+<div class="container">
   <div class="row">
     <div class="col-8">
-      <div class="default-card">
-        <h3><%= @apartment.neighborhood %></h3>
-        <h2><%= @apartment.name %> <%= @apartment.address %></h2>
+      <div class="container">
+        <h3 class='my-2'>Description</h4>
+        <p><%= @apartment.description %></p>
+        <h3 class='mt-2 mb-1'>Furnished apartment</h4>
+        <p>Vero earum commodi soluta.", "Quaerat fuga cumque et vero eveniet omnis ut.", "Cumque sit dolor ut est consequuntur.</p>
+        <p>
+          More details...
+        </p>
+        <h3 class='mt-2 mb-1'>Cozy environment</h4>
+        <p>Your Tabas apartment already comes with modern and sophisticated furniture, a fully well equipped kitchen with first-class appliances, a coffee machine in capsules and utensils, such as: crockery, bowls, pans and cutlery. The decoration makes the environments even more pleasant and is also on us.</p>
+        <h3 class='mt-2 mb-1'>Comfortable and relaxing</h4>
+        <p>Rooms equipped with Smart TV, cable TV and Wi-Fi make the space ready to have fun, study or work from home. Be happy to find that every room at Tabas comes with high quality mattresses, luxury linens and towels. And those are just some of the amenities of this apartment. We take care of everything so you can simply enjoy your stay and feel at home.</p>
+        <h3 class='mt-2 mb-1'>Good location</h4>
+        <p>This Tabas apartment is located in Vila Buarque - São Paulo, close to key interest points of the region.</p>
+        <h3 class='mt-2 mb-1'>Easy booking</h4>
+        <p>Choose the length of your stay and rent directly from the website in a few minutes. All that, knowing exactly how much you will pay, with no hidden fees.</p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="default-card-right-column">
+        <h5>from <i class="fa-solid fa-brazilian-real-sign"></i><%= @apartment.price_per_month %>/mo</h5>
+        <h5><small>Available</small> 13th Sep</h5>
+        <div class="d-grid gap-2">
+          <button class="btn btn-dark my-1 rounded-button" type="button">Rent now</button>
+          <button class="btn btn-outline-dark rounded-button" type="button"><i class="fa-brands fa-whatsapp"></i>WhatsApp us</button>
+        </div>
       </div>
     </div>
   </div>

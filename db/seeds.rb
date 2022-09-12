@@ -19,7 +19,7 @@ bedrooms = (1..5).to_a
 50.times do |i|
   apartment = Apartment.create!(
     name: "#{quality.sample} #{place.sample} at",
-    description: Faker::Lorem.paragraph(sentence_count: 4),
+    description: Faker::Lorem.sentence(word_count: 93),
     neighborhood: hood.sample,
     address: Faker::Address.street_address,
     price_per_month: price.sample,
