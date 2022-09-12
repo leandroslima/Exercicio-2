@@ -1,5 +1,5 @@
 <div class='top-background-image' style="background-image: url(<%= rails_blob_url(@apartment.cover_photo) %>);">
-  <div class="default-card header">
+  <div class="default-card header-show">
     <h3><%= @apartment.neighborhood %></h3>
     <h2><%= @apartment.name %> <%= @apartment.address %></h2>
     <h6>
@@ -32,13 +32,14 @@
       </div>
     </div>
     <div class="col-4">
-      <div class="default-card-right-column">
+      <div class="default-card-right-column sticky-top" style='margin-top: -125px;'>
         <h5>from <i class="fa-solid fa-brazilian-real-sign"></i><%= @apartment.price_per_month %>/mo</h5>
         <h5><small>Available</small> 13th Sep</h5>
         <div class="d-grid gap-2">
-          <button class="btn btn-dark my-1 rounded-button" type="button">Rent now</button>
-          <button class="btn btn-outline-dark rounded-button" type="button"><i class="fa-brands fa-whatsapp"></i>WhatsApp us</button>
+          <button class="btn btn-dark my-1 rounded-button" type="button"><strong>Rent now</strong></button>
+          <button class="btn btn-outline-dark rounded-button" type="button"><i class="fa-brands fa-whatsapp"></i>&nbsp&nbsp<strong>WhatsApp us</strong></button>
         </div>
+        <p class='text-center mt-3' style='margin-bottom: 0px;'><small><u>or Contact us</u></small></p>
       </div>
     </div>
   </div>

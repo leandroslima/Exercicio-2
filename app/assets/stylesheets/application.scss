@@ -9,14 +9,16 @@ a {
 }
 
 .top-background-image {
-  height: 250px;
+  height: 350px;
   background-position: center;
-  background-size: cover
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
 }
 
-.header {
-  padding-top: 7.5rem ;
-  padding-left: 4.5rem;
+.header-show {
+  padding-left: 5rem;
+  padding-bottom: 1rem;
 }
 
 .default-card-right-column {
