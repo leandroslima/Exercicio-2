@@ -16,8 +16,8 @@ hood = ['Bela Vista', 'Brooklin', 'Campo Belo', 'Consolação', 'Itaim Bibi', 'J
 price = (5000..20000).to_a
 bedrooms = (1..5).to_a
 
-50.times do
-  Apartment.create!(
+50.times do |i|
+  apartment = Apartment.create!(
     name: "#{quality.sample} #{place.sample} at",
     description: Faker::Lorem.paragraph(sentence_count: 4),
     neighborhood: hood.sample,
@@ -25,6 +25,8 @@ bedrooms = (1..5).to_a
     price_per_month: price.sample,
     number_of_bedrooms: bedrooms.sample
   )
+
+  apartment.photos.attach(io: File.open(Rails.root.join("app", "assets", "images", "photos", "photo (#{i+1}).jpg")), filename: apartment.name)
 end
 
-puts "Movies created"
+puts "Apartments created"

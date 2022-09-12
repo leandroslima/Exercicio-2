@@ -7,13 +7,13 @@
       <div class='row'>
         <% @apartments.each do |apartment| %>
           <div class="col-sm-6">
-            <%= link_to apartments_path do %>
+            <%= link_to apartment_path(apartment) do %>
               <div class="card mb-3" style='width: 20rem; height:25rem'>
-                <img src="https://source.unsplash.com/1500x1000/?room&sig=100" alt="a beautiful room">
+                <%= image_tag apartment.cover_photo %>
                 <div class="card-body">
                   <h5 class="card-title"><%= apartment.neighborhood %></h5>
-                  <h3 class="card-subtitle"><%= apartment.address %></h3>
-                  <p class="card-text"><%= apartment.number_of_bedrooms %> bedroom(s)<strong>.</strong><%= apartment.number_of_bedrooms %> bathroom(s)</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <h3 class="card-subtitle text-truncate"><%= apartment.address %></h3>
+                  <p class="card-text"><%= apartment.number_of_bedrooms %> bedroom(s)<strong> . </strong><%= apartment.number_of_bedrooms %> bathroom(s)
                   <h3 class="card-text">from <i class="fa-solid fa-brazilian-real-sign"></i><%= apartment.price_per_month %>/mo</h3>
                 </div>
               </div>
