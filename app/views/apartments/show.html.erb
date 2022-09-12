@@ -3,15 +3,15 @@
     <h3><%= @apartment.neighborhood %></h3>
     <h2><%= @apartment.name %> <%= @apartment.address %></h2>
     <h6>
-      <span><i class="fa-solid fa-bed"></i><%= @apartment.number_of_bedrooms %></span>&nbsp&nbsp
-      <span><i class="fa-solid fa-bath"></i><%= @apartment.number_of_bedrooms %></span>&nbsp&nbsp
+      <span><i class="fa-solid fa-bed"></i><%= @apartment.number_of_bedrooms %> bed<%= @apartment.number_of_bedrooms > 1 ? "s" : "" %></span>&nbsp&nbsp
+      <span><i class="fa-solid fa-bath"></i><%= @apartment.number_of_bedrooms %> bath<%= @apartment.number_of_bedrooms > 1 ? "s" : "" %></span>&nbsp&nbsp
       <span><i class="fa-solid fa-house"></i>100 sqm</span>
     </h6>
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
+<div class="body-1">
+  <div class="row main-text-show">
     <div class="col-8">
       <div class="container">
         <h3 class='my-2'>Description</h4>
@@ -39,7 +39,7 @@
           <button class="btn btn-dark my-1 rounded-button" type="button"><strong>Rent now</strong></button>
           <button class="btn btn-outline-dark rounded-button" type="button"><i class="fa-brands fa-whatsapp"></i>&nbsp&nbsp<strong>WhatsApp us</strong></button>
         </div>
-        <p class='text-center mt-3' style='margin-bottom: 0px;'><small><u>or Contact us</u></small></p>
+        <p href="#" class='text-center mt-3' style='margin-bottom: 0px;'><a href="#"><small><u>or Contact us</u></small></a></p>
       </div>
     </div>
   </div>
