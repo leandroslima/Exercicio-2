@@ -6,10 +6,25 @@ Model Property with a required name and has many photos
 For each property, the third photo is the property cover
 The photos are stored locally.
 
+  PERSONAL COMMENTS:
+  As the original app from tabas.com use model Apartment instead of Property, I took the liberty to apply the name Apartment
+  to my app as well. I did it in order to make a closer copy of tabas.com.
+  Following above principle, when generating a model to Devise I decided to name it as Member instead of User, same as tabas.com.
+  The photos were downloaded and renamed in batch to the folder 'app/assets/images/photos'.
+  It was seeded 3 unique photos per apartment.
+  The third photo was assigned as cover in the file 'apartment.rb', under method 'cover_photo'.
+
+
+
 Frontend
 
 Display the list of properties with their cover photo, the layout style has to be similar to www.tabas.com layout style.
 The app should have the ability to seed the database with 50 properties, 3-5 photos per property
+
+  PERSONAL COMMENTS:
+  The root is directed to 'apartments#index'.
+  Clicking on any card presented on root page directs you to 'apartments#show'.
+  These are the 2 pages I modeled from tabas.com.
 
 What We Are Looking For
 
