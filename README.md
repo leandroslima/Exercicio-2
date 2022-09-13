@@ -14,7 +14,7 @@ The photos are stored locally.
   It was seeded 3 unique photos per apartment.
   The third photo was assigned as cover in the file 'apartment.rb', under method 'cover_photo'.
   When creating apartments show route I tried using the shortcut "resources :apartments, only: :show", but it wasn´t creating the show route with the
-  ":id" in the end of it. I don´t know why this was happening. That´s why I decided to use  /get "apartments/:id", to: "apartments#show", as: :apartment/.
+  ":id" in the end of it. I don´t know why this was happening. That´s why I decided to use  "get "apartments/:id", to: "apartments#show", as: :apartment".
 
 
 Frontend
